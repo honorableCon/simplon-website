@@ -12,9 +12,7 @@ let hero = _(".hero");
 let counter = 1;
 
 setInterval(function () {
-    let slide = `url(../../assets/images/${images[counter]}.jpg)`;
-    // _(".far").toggleClass('fa');
-    // _(".fa").toggleClass('fa');
+    let slide = `url(assets/images/${images[counter]}.jpg)`;
     hero.style.backgroundImage = slide;
     counter++;
     if (counter == images.length){
