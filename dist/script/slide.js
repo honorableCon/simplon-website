@@ -15,7 +15,7 @@ setInterval(function () {
     let slide = `url(assets/images/${images[counter]}.jpg)`;
     // _(".far").toggleClass('fa');
     // _(".fa").toggleClass('fa');
-    hero.style.backgroundImage = slide;
+    // hero.style.backgroundImage = slide
     counter++;
     if (counter == images.length){
         counter = 0;
