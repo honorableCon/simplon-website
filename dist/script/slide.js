@@ -3,10 +3,6 @@ let images = [
 ]
 let slideIndication = __(".slide-indication i")
 
-// for (let index = 0; index < slideIndication.length; index++) {
-//     const element = slideIndication[index];
-//     console.log(element);
-// }
 
 let hero = _(".hero");
 let counter = 1;
