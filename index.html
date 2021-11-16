@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/yombal-dom@1.0.2/utils.js" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/ea05a76d15.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="dist/css/style.min.css">
     <title>Simplon Website</title>
@@ -12,23 +13,39 @@
 
 <!-- =============================== header =============================== -->
 <header class="container-fluid py-2">
-<div class="d-flex align-items-center justify-content-around">
-  <div class="brand">
-    <img src="assets/images/logo-senegal.png" height="57" alt="brand logo">
-  </div>
-  <nav class="">
-    <ul class="d-flex flex-row align-items-center">
-      <li><a href="#" class="active">Accueil</a></li>
-      <li><a href="#">Fabrique</a></li>
-      <li><a href="#">Formations</a></li>
-      <li><a href="#">Partanariats</a></li>
-      <li><a href="#">Espaces</a></li>
-      <li><a href="#">Entités</a></li>
-      <li><img class="ms-5" src="assets/images/icon-search.png" alt="icon search"></li>
+<div class="main-header d-lg-flexa d-flex justify-content-lg-between align-items-center">
+  <div class="w-100 d-flex justify-content-between align-items-center">
+    <div class="brand">
+      <img src="assets/images/logo-senegal.png" height="57" alt="brand logo">
+    </div>
+    <div class="burger d-lg-none d-flex justify-content-center align-items-center">
+      <a href="#">
+        <i class="fas fa-bars fa-2x" aria-hidden="true"></i>
+      </a>
+    </div>
+  </div>  
+  <nav class="d-none d-lg-flex">
+    <ul class="d-flex flex-column flex-lg-row align-items-center">
+      <li class="nav-item"><a href="#" class="active">Accueil</a></li>
+      <li class="nav-item"><a href="#">Fabrique</a></li>
+      <li class="nav-item"><a href="#">Formations</a></li>
+      <li class="nav-item"><a href="#">Partanariats</a></li>
+      <li class="nav-item"><a href="#">Espaces</a></li>
+      <li class="nav-item"><a href="#">Entités</a></li>
+      <li class="nav-item d-lg-flex align-items-center">
+        <input class="d-none" type="search" name="search" id="input-search" placeholder="search..">
+        <img class="ms-5 ico-search" width="20" height="20" src="assets/images/icon-search.png" alt="icon search">
+      </li>
     </ul>
   </nav>
-  <div class="d-flex flex-row">
-    <p class="dropdown lang">Fr</p>
+  <div class="ms-lg-5 d-lg-flex flex-lg-row align-items-center d-none">
+    <div class="relative">
+      <p class="dropdown lang">Fr</p>
+      <select name="lang" id="lang" > 
+        <option value="Fr">fr</option>
+        <option value="En">en</option>
+      </select> 
+    </div>
     <div class="contact">
       <a href="#" class="btn">contact</a>
     </div>
@@ -37,15 +54,20 @@
 </header>
 
 <!-- =============================== Hero =============================== -->
-<div class="hero">
+<div class="hero d-flex flex-column justify-content-between align-items-between">
   <div class="rows">
-    <div class="secs col-lg-7">
+    <div class="col-lg-7">
       <h1>Simplon, <br> réseau de Fabriques numériques et inclusives</h1>
       <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. <br>
         Suspendisse varius enim in eros elementum tristique.
       </p>
       <a href="#" class="btn">Nous contacter</a>
     </div>
+  </div>
+  <div class="mt-lg-4 slide-indication">
+    <i class="far fa-circle me-3" aria-hidden="true"></i>
+    <i class="fa fa-circle me-3" aria-hidden="true"></i>
+    <i class="fa fa-circle" aria-hidden="true"></i>
   </div>
 </div>
 
@@ -68,9 +90,9 @@
 
 <!-- =============================== Nos Nouvelles =============================== -->
 
-<div class="container news m-auto">
+<section class="container news m-auto">
   <h2 class="sec-title">Nos Nouvelles</h2>
-  <div class="actus">
+  <article class="actus">
     <h3 class="sec-subtitle">Actualités</h3>
     <div class="row posts">
       <div class="cart col-lg-3">
@@ -130,12 +152,12 @@
       <p class="me-3">Plus d'actualités</p>
       <i class="fa fa-plus-circle" aria-hidden="true"></i>
     </div>
-  </div>
+  </article>
 
-  <div class="events">
+  <aside class="events">
     <h3 class="sec-subtitle">Evenements à venir</h3>
-    <div class="d-flex">
-      <div class="event me-4 col-lg align-items-start d-flex justify-content-between">
+    <div class="d-lg-flex">
+      <div class="event mb-3 mb-lg-0 me-lg-4 col-lg align-items-start d-flex justify-content-between">
         <div class="date me-3">
           <h2 class="day">23</h2>
           <p class="month">SEP</p>
@@ -160,8 +182,8 @@
         <i class="next-logo align-self-center fas fa-arrow-circle-right fa-2x" aria-hidden="true"></i>
       </div>
     </div>
-  </div>
-</div>
+  </aside>
+</section>
 
 <!-- =============================== Decouvertes =============================== -->
 
@@ -174,16 +196,16 @@
         </p>
       </div>
   </div>
-  <div class="row stats p-5">
-    <div class="col-lg">
+  <div class="row stats p-1 py-4 p-lg-5">
+    <div class="col">
       <h2>100</h2>
       <p>Formateurs expert</p>
     </div>
-    <div class="col-lg">
+    <div class="col">
       <h2>385</h2>
       <p>Apprenant.es formé.es depuis l’ouverture dans le pays</p>
     </div>
-    <div class="col-lg">
+    <div class="col">
       <h2>96</h2>
       <p>Enfants sensibilisé.e.s au numérique</p>
     </div>
@@ -194,10 +216,10 @@
 
 <div class="container formateurs my-5">
   <h2 class="sec-title-v2">Formateurs</h2>
-  <div class="carts d-flex">
-    <div class="cart d-flex flex-column col-6 m-5">
+  <div class="carts d-flex flex-column flex-lg-row">
+    <div class="cart d-flex flex-column col-lg-6 m-lg-5 m-3">
       <div class="d-flex">
-        <img class="me-4" src="assets/images/samba.png" alt="">
+        <img class="me-lg-4" src="assets/images/samba.png" alt="">
         <div class="p-3">
           <h3 >Samba Bery Kane</h3>
           <h4 class="mb-1">Formateur</h4>
@@ -206,14 +228,12 @@
           </p>
         </div>
       </div>
-      <!-- <div class="btn-container"> -->
-        <a href="#" class="btn align-self-end mb-5">voir plus</a>
-      <!-- </div> -->
+        <a href="#" class="btn align-self-end mb-lg-5 mb-4">voir plus</a>
     </div>
 
-    <div class="cart d-flex flex-column col-6 m-5">
+    <div class="cart d-flex flex-column col-lg-6 m-lg-5 m-3">
       <div class="d-flex">
-        <img class="me-4" src="assets/images/samba.png" alt="">
+        <img class="me-lg-4" src="assets/images/samba.png" alt="">
         <div class="p-3">
           <h3 >Samba Bery Kane</h3>
           <h4 class="mb-1">Formateur</h4>
@@ -222,9 +242,7 @@
           </p>
         </div>
       </div>
-      <!-- <div class="btn-container"> -->
-        <a href="#" class="btn align-self-end mb-5">voir plus</a>
-      <!-- </div> -->
+        <a href="#" class="btn align-self-end mb-lg-5 mb-4">voir plus</a>
     </div>
   </div>
 </div>
@@ -232,7 +250,7 @@
 <!-- =============================== apprenants =============================== -->
 
 <div class="container apprenants">
-  <div class="d-flex">
+  <div class="d-lg-flex">
     <div class="col-lgd left ">
       <h2 class="sec-title-v2">Apprenants</h2>
       <p>
@@ -254,7 +272,7 @@
 <!-- =============================== histoire de la communauté =============================== -->
 
 <div class="container community-story my-5">
-  <div class="d-flex">
+  <div class="d-flex flex-column-reverse flex-lg-row">
     <img class="ellipse" src="assets/images/ellipse-big.png" alt="ellipse">
     <div class="col-lg left p-0">
       <div class="frame-video">
@@ -264,7 +282,7 @@
       </div>
       <p class="desc">Les anciens simploniens qui ont ete formes au developpement web et mobile dans la fabrique Simplon.co</p>
     </div>
-    <div class="col-lgd right">
+    <div class="right">
       <h2 class="sec-title-v2">Histoire de la communauté</h2>
       <p>
         LoreJm ipsum dolor sit, amet consectetur adipisicing elit. Dolor quod eius nisi quidem velit tenetur, quia, animi sit obcaecati, tempora esse minus at saepe nobis distinctio consectetur eum tempore cere! Distinctio.
@@ -288,7 +306,7 @@
 
 <!-- =============================== Alumni =============================== -->
 <div class="container alumni">
-  <div class="d-flex">
+  <div class="d-lg-flex">
     <div class="col-lgd left ">
       <h2 class="sec-title-v2">Alumni</h2>
       <p>
@@ -313,33 +331,33 @@
   <div class="row carts">
     <img src="assets/images/ellipse.png" alt="ellipse" class="ellipse e-top">
     <img src="assets/images/ellipse.png" alt="ellipse" class="ellipse e-bot">
-    <div class="col-lg cart p-5">
+    <div class="col-lg col-10 cart mb-4 p-lg-5">
       <img class="quotes" src="assets/images/chevrons.png" alt="quotes">
       <p>LoreJm ipsum dolor sit, amet consectetur adipisicing elit. Dolor quod eius nisi quidem velit tenetur, quia, animi sit obcaecati, tempora esse minus at saepe nobis distinctio consectetur eum tempore cere!.esse minus at saepe nobis distinctio consectetur eum tempore cere!.</p>
-      <div class="d-flex justify-content-between align-items-center">
-        <img class="profil" src="assets/images/samba.png" alt="profil">
+      <div class="d-flex justify-content-lg-between align-items-center">
+        <img class="profil me-4" src="assets/images/samba.png" alt="profil">
         <div>
           <h3>Samba KANE</h3>
           <h4>Formateur</h4>
         </div>
       </div>
     </div>
-    <div class="col-lg cart p-5">
+    <div class="col-lg col-10 cart mb-4 p-lg-5">
       <img class="quotes" src="assets/images/chevrons.png" alt="quotes">
       <p>LoreJm ipsum dolor sit, amet consectetur adipisicing elit. Dolor quod eius nisi quidem velit tenetur, quia, animi sit obcaecati, tempora esse minus at saepe nobis distinctio consectetur eum tempore cere!.esse minus at saepe nobis distinctio consectetur eum tempore cere!.</p>
-      <div class="d-flex justify-content-between align-items-center">
-        <img class="profil" src="assets/images/samba.png" alt="profil">
+      <div class="d-flex justify-content-lg-between align-items-center">
+        <img class="profil me-4" src="assets/images/samba.png" alt="profil">
         <div>
           <h3>Samba KANE</h3>
           <h4>Formateur</h4>
         </div>
       </div>
     </div>
-    <div class="col-lg cart p-5">
+    <div class="col-lg col-10 cart mb-4 p-lg-5">
       <img class="quotes" src="assets/images/chevrons.png" alt="quotes">
       <p>LoreJm ipsum dolor sit, amet consectetur adipisicing elit. Dolor quod eius nisi quidem velit tenetur, quia, animi sit obcaecati, tempora esse minus at saepe nobis distinctio consectetur eum tempore cere!.esse minus at saepe nobis distinctio consectetur eum tempore cere!.</p>
-      <div class="d-flex justify-content-between align-items-center">
-        <img class="profil" src="assets/images/samba.png" alt="profil">
+      <div class="d-flex justify-content-lg-between align-items-center">
+        <img class="profil me-4" src="assets/images/samba.png" alt="profil">
         <div>
           <h3>Samba KANE</h3>
           <h4>Formateur</h4>
@@ -354,15 +372,15 @@
   <h2 class="sec-title">Nous Contacter</h2>
   <div class="row">
     <form class="col-lg me-lg-5" action="#">
-      <div class="d-flex justify-content-between mb-3">
+      <div class="d-lg-flex justify-content-between mb-lg-3">
         <input class="champ me-lg-5" type="text" name="firstname" id="firstname" placeholder="Prénom *">
         <input class="champ" type="text" name="lastname" id="lastname" placeholder="Nom *">
       </div>
-      <div class="d-flex justify-content-between mb-3">
+      <div class="d-lg-flex justify-content-between mb-lg-3">
         <input class="champ me-lg-5" type="email" name="email" id="email" placeholder="Email *">
         <input class="champ" type="tel" name="tel" id="tel" placeholder="Téléphone *">
       </div>
-      <textarea class="champ" placeholder="Message *" name="message" id="message">
+      <textarea class="champ" placeholder="Message" name="message" id="message">
       </textarea>
       <input class="me-2" type="checkbox" name="check" id="check">
       <label for="check">I agree to <span class="terms">terms et policy</span></label>
@@ -370,12 +388,11 @@
       <p class="indications">* These fields are required</p>
     </form>
 
-    <div class="col-lg-4 ms-lg-5 coord">
+    <div class="col-lg-4 ms-lg-5 mt-5 coord">
       <div class="adress d-flex mb-5">
         <i class="fas fa-map-marker-alt fa-2x mt-1"></i>
-        <!-- <i class="fa-2x fas map-marker-alt" aria-hidden="true"></i> -->
         <div class="ms-lg-5">
-          <h4 class="mb-3">Adresse</h4>
+          <h4 class="mb-lg-3">Adresse</h4>
           <p>Cité keur Goor Gi <br>
             Dakar, Sicap, Libeté 2 <br>
             Senegal
@@ -383,16 +400,16 @@
         </div>
       </div>
       <div class="tel d-flex mb-5">
-        <i class="fa-2x mt-1 fas phone-alt" aria-hidden="true"></i>
+        <i class="fas fa-phone-alt fa-2x mt-1" aria-hidden="true"></i>
         <div class="ms-lg-5">
-          <h4 class="mb-3">Téléphone</h4>
+          <h4 class="mb-lg-3">Téléphone</h4>
           <p>(221) 77 456 78 90 <br>
             (221) 77 654 32 10  <br>
           </p>
         </div>
       </div>
       <div class="email d-flex mb-5">
-        <i class="fa-2x mt-1 fas fa-envelope-alt" aria-hidden="true"></i>
+        <i class="fas fa-envelope fa-2x mt-1" aria-hidden="true"></i>
         <div class="ms-lg-5">
           <h4 class="mb-3">E-mail</h4>
           <p>simplon@email.com <br>
@@ -405,11 +422,11 @@
 </div>
 
 <!-- =============================== footer =============================== -->
-<footer class="d-flex flex-column container-fluid mt-5 justify-content-between">
+<footer class="d-lg-flex flex-lg-column container-fluid mt-5 justify-content-between">
   <div class="row more-info">
     <div class="col-lg">
       <img src="assets/images/logo-sen-white.png" alt="logo senegal">
-      <div class="social-icons mt-5 d-flex justify-content-between">
+      <div class="social-icons mt-5 d-flex mb-4 justify-content-between">
         <i class="fa fa-twitter" style="color: #1DA1F2;"  aria-hidden="true"></i>
         <i class="fa fa-facebook" style="color: #4267B2;"  aria-hidden="true"></i>
         <i class="fa fa-instagram" style="color: #F77737;"  aria-hidden="true"></i>
@@ -442,18 +459,18 @@
         (221) 77 654 32 10
       </p>
     </div>
-    <div class="col-lg-4 newsletter px-4">
+    <div class="col-lg-4 newsletter px-lg-4">
       <h2 class="mb-4">Notre Newsletter</h2>
       <p class="mb-5">Souscrivez-vous à notre newsletter pour ne manquer aucune de nos activités</p>
-      <div class="formulaire w-100">
+      <div class="formulaire">
         <input class="champ" type="email" name="email-foot" id="email-foot" placeholder="Email">
         <a class="btn" href="#">joindre</a>
       </div>
     </div>
   </div>
 
-  <div class="row copyright p-4 justify-content-between align-items-center">
-    <div class="left col-lg d-flex align-items-center">
+  <div class="row copyright py-3 p-lg-4 justify-content-lg-between align-items-center">
+    <div class="left col-lg d-flex align-items-center mb-3">
       <i class="fa fa-copyright fa-lg me-2" aria-hidden="true"></i>
       <h4>2021 Simplon. All rights reserved.</h4>
     </div>
@@ -465,5 +482,8 @@
     </div>
   </div>
 </footer>
+
+<script src="./dist/script/slide.js" defer></script>
+<script src="main.js"></script>
 </body>
 </html>
