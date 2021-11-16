@@ -14,6 +14,7 @@ let counter = 1;
 setInterval(function () {
     let slide = `url(assets/images/${images[counter]}.jpg)`;
     hero.style.backgroundImage = slide;
+
     counter++;
     if (counter == images.length){
         counter = 0;
