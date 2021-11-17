@@ -1,0 +1,46 @@
+header{
+    nav{
+        ul{
+            list-style: none;
+        }li{
+            a{
+                display: block;
+                font-size: 16px;
+                font-weight: 700;
+                color: black;   
+                padding: 20px;
+            }.active{
+                color: $primary-color;
+                border-bottom: 5px solid $primary-color ;
+            }
+        }
+    }.relative{
+        position: relative;
+    }.lang{
+        font-weight: 700;
+        margin: 0 8px;
+    }select{
+        position: absolute;
+        top: 0;
+        right: 0;
+        opacity: 0;
+    }
+    input{
+        @extend %champ;
+        padding: 20px;
+        border-radius: 50px;
+        height: 5px;
+        margin-bottom: 0;
+    }
+    @media screen and (max-width:$large-breakpoint) {
+        .burger{
+            border: rgba(128, 128, 128, 0.459) 1px solid;
+            border-radius: 12px;
+            height: 50px;
+            width: 50px;
+            i{
+                color: $primary-color;
+            }
+        }
+    }
+}
