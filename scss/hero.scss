@@ -1,0 +1,37 @@
+.hero{
+    height: 600px;
+        background-image: url("../../assets/images/hero.jpg");
+        background-position: center;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.356);
+        background-blend-mode: multiply;
+        background-attachment: fixed;
+    padding-left: 177px;
+    padding-top: 79px;
+    color: #fff;
+    h1{
+        font-size: 54px;
+        font-weight: 900;
+        padding-bottom: 22px;
+    }
+    p{
+        font-size: 22px;
+        font-weight: 400;
+        padding-bottom: 47px;
+    }
+    .btn{
+        padding: 18px 37px;
+    }
+    @media screen and (max-width:$large-breakpoint) {
+        padding: 25px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        h1{
+            font-size: 34px;
+        }p{
+            font-size: 20px;
+        }
+    }
+}

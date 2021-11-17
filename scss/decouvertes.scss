@@ -1,0 +1,63 @@
+.decouvertes{
+    margin: 10% 0;
+    .hero{
+        height: 600px;
+            background-image: url("../../assets/images/decouverte.jpg");
+            background-position: center;
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.61);
+            background-blend-mode: multiply;
+        padding-left: 96px;
+        padding-top: 111px;
+        color: #fff;
+
+        h1{
+            font-size: 100px;
+            font-weight: 900;
+            padding-bottom: 22px;
+        }p{
+            font-size: 26px;
+            font-weight: 400;
+            padding-bottom: 47px;
+            line-height: 179.9%;
+        }
+    }.stats{
+        border-radius: 10px;
+        background-image: url("../../assets/images/bg-vector.png");
+        background-position: center;
+        background-size: cover;
+        color: white;
+        text-align: center;
+        margin: 0 10%;
+        margin-top: -8%;
+        h2{
+            font-size: 56px;
+            font-weight: 900;
+        }p{
+            font-size: 24px;
+            font-weight: 300;
+        }
+    }
+    @media screen and (max-width:$large-breakpoint) {
+        .hero{
+            padding: 25px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            h1{
+                font-size: 50px;
+            }p{
+                line-height: 185.9%;
+                font-size: 20px;
+            }
+        }.stats{
+            margin: -10% 1% auto 1%;
+            h2{
+                font-size: 30px;
+            }p{
+                font-size: 14px;
+            }
+        }
+    }
+}
